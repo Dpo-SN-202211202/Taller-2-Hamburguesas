@@ -1,0 +1,9 @@
+Pedido #1
+Nombre: Andre
+Dirección: bobotontos
+
+PRODUCTOS
+1. corral quesosinlechugaconqueso mozzarellasincebolla || $18500.0 || cal:9560
+
+Total: $22015.0
+Total calorias: 9560

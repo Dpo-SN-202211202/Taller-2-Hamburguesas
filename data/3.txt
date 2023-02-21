@@ -1,0 +1,9 @@
+Pedido #3
+Nombre: 4
+Dirección: 4
+
+PRODUCTOS
+1. papas en casco grandes || $6900.0 || cal:4260
+
+Total: $8211.0
+Total calorias: 4260
