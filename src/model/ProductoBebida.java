@@ -6,12 +6,12 @@ public class ProductoBebida implements Producto
 	private String nombre;
 	private int cal;
 	private float precioBase;
-	
+
 	public ProductoBebida(String nombre, int precioBase, int cal)
 	{
-		this.nombre=nombre;
-		this.precioBase=precioBase;
-		this.cal=cal;
+		this.nombre = nombre;
+		this.precioBase = precioBase;
+		this.cal = cal;
 	}
 
 	@Override

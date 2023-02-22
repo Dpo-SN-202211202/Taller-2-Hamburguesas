@@ -5,14 +5,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Hashtable;
 
 import model.Combo;
-import model.Ingrediente;
 import model.Pedido;
 import model.Producto;
-import model.ProductoAjustado;
-import model.ProductoMenu;
 import model.Restaurante;
 
 public class Aplicacion
@@ -54,26 +50,34 @@ public class Aplicacion
 			} else if (opcion == 6)
 			{
 				System.out.println("Saliendo de la app...");
+				System.out.print("\033[H\033[2J");
+				System.out.flush();
 				break;
 			} else
 			{
 				System.out.println("Seleccione una opcion valida, por favor");
+				System.out.print("\033[H\033[2J");
+				System.out.flush();
 
 			}
 			mostrarMenu();
 			opcion = Integer.parseInt(input("\nSeleccione una opcion"));
+			System.out.print("\033[H\033[2J");
+			System.out.flush();
 		}
 	}
 
 	private void ejecutarCargarDatos()
 	{
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
 		System.out.println("Cargando información de la base de datos...");
 		restaurante = new Restaurante();
 		File archivoIngredientes = new File("./Data/ingredientes.txt");
 		File archivoMenu = new File("./Data/menu.txt");
 		File archivoCombos = new File("./Data/combos.txt");
 		File archivoBebidas = new File("./Data/bebidas.txt");
-		restaurante.cargarInformacionRestaurante(archivoIngredientes, archivoMenu, archivoCombos,archivoBebidas);
+		restaurante.cargarInformacionRestaurante(archivoIngredientes, archivoMenu, archivoCombos, archivoBebidas);
 
 	}
 
@@ -124,7 +128,7 @@ public class Aplicacion
 			int j = 0;
 			for (Producto i : lista_productos)
 			{
-				System.out.println((j + 1) + ". " + i.getNombre() + "|| $" + i.getPrecio()+" || cal: "+i.getCal());
+				System.out.println((j + 1) + ". " + i.getNombre() + "|| $" + i.getPrecio() + " || cal: " + i.getCal());
 				j++;
 			}
 			int producto_escogido = Integer.parseInt(input("Que producto desea (0 - " + j + ")"));
@@ -136,13 +140,13 @@ public class Aplicacion
 			{
 				System.out.println("Opcion errónea");
 			}
-		}else if (opcion == 3)
+		} else if (opcion == 3)
 		{
 			ArrayList<Producto> lista_productos = restaurante.getBebidas();
 			int j = 0;
 			for (Producto i : lista_productos)
 			{
-				System.out.println((j + 1) + ". " + i.getNombre() + "|| $" + i.getPrecio()+" || cal: "+i.getCal());
+				System.out.println((j + 1) + ". " + i.getNombre() + "|| $" + i.getPrecio() + " || cal: " + i.getCal());
 				j++;
 			}
 			int producto_escogido = Integer.parseInt(input("Que producto desea (0 - " + j + ")"));

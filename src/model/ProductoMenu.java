@@ -5,12 +5,12 @@ public class ProductoMenu implements Producto
 	private String nombre;
 	private float precioBase;
 	private int cal;
-	
+
 	public ProductoMenu(String nombre, int precioBase, int cal)
 	{
-		this.nombre=nombre;
-		this.precioBase=precioBase;
-		this.cal=cal;
+		this.nombre = nombre;
+		this.precioBase = precioBase;
+		this.cal = cal;
 	}
 
 	@Override
@@ -36,6 +36,5 @@ public class ProductoMenu implements Producto
 	{
 		return this.cal;
 	}
-	
-	
+
 }

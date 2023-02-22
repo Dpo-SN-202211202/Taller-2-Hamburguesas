@@ -1,9 +1,0 @@
-Pedido #4
-Nombre: x
-Dirección: x
-
-PRODUCTOS
-1. agua cristal con gas || $5000.0 || cal:560
-
-Total: $5950.0
-Total calorias: 560
